@@ -1,29 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NZ Time Widget</title>
-  </head>
-  <body>
-    <span class="wtb-ew-v1" style="width: 204px; display: inline-block">
-      <script src="https://www.worldtimebuddy.com/clock_widget.js?h=2193733&bc=8BA1BB&cn=&wt=c1"></script>
-      <i><a href="https://www.worldtimebuddy.com/">World Clock</a></i>
-      <noscript
-        ><a href="https://www.worldtimebuddy.com/">World Clock</a></noscript
-      >
-      <script>
-        window[wtb_event_widgets.pop()].init();
-      </script>
-    </span>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MrBiscuit921 | Personal Website</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <!-- Introduction Card -->
+    <div class="card intro-card">
+      <div class="intro-content">
+        <h1>Hi, I'm MrBiscuit!</h1>
+        <p>Developer with a passion for web technologies and creative solutions. Experienced in frontend and backend development with a focus on creating delightful user experiences.</p>
+      </div>
+    </div>
 
-    <div id="time"></div>
-    <script>
-      const timeDiv = document.getElementById("time");
-      setInterval(() => {
-        const now = new Date().toLocaleTimeString();
-        timeDiv.textContent = now;
-      }, 1000);
-    </script>
-  </body>
+    <!-- Current Time Card -->
+    <div class="card time-card">
+      <div class="time-content">
+        <h2>Current Time (NZT)</h2>
+        <div class="time-display" id="current-time">
+          Loading time...
+        </div>
+      </div>
+    </div>
+
+    <!-- About Card -->
+    <div class="card about-card">
+      <h2>ABOUT</h2>
+      <p>"Baking code that's both sweet and functional."</p>
+      <a href="#" class="arrow-link">
+        <i class="fas fa-arrow-right"></i>
+      </a>
+    </div>
+
+    <!-- Profile Image Card -->
+    <div class="card profile-card">
+      <img src="https://github.com/MrBiscuit921.png" alt="MrBiscuit921 Profile" class="profile-image">
+    </div>
+
+    <!-- Contact Card -->
+    <div class="card contact-card">
+      <h2>Have a project in mind?</h2>
+      <button class="copy-email-btn" id="copyEmailBtn">
+        Copy Email <i class="fas fa-copy"></i>
+      </button>
+    </div>
+
+    <!-- Projects Card -->
+    <div class="card projects-card">
+      <h2>PROJECTS</h2>
+      <p>Some of my projects</p>
+      <a href="#" class="arrow-link">
+        <i class="fas fa-arrow-right"></i>
+      </a>
+    </div>
+
+    <!-- GitHub Stats Card -->
+    <div class="card github-stats-card">
+      <h2>MrBiscuit's GitHub Stats</h2>
+      <div class="stats-container">
+        <div class="stat-item">
+          <i class="fas fa-star"></i>
+          <span>Total Stars Earned:</span>
+          <span class="stat-value" id="stars-count">-</span>
+        </div>
+        <div class="stat-item">
+          <i class="fas fa-code-commit"></i>
+          <span>Total Commits (2025):</span>
+          <span class="stat-value" id="commits-count">-</span>
+        </div>
+        <div class="stat-item">
+          <i class="fas fa-code-pull-request"></i>
+          <span>Total PRs:</span>
+          <span class="stat-value" id="prs-count">-</span>
+        </div>
+        <div class="stat-item">
+          <i class="fas fa-exclamation-circle"></i>
+          <span>Total Issues:</span>
+          <span class="stat-value" id="issues-count">-</span>
+        </div>
+      </div>
+      <div class="github-grade">
+        <span id="github-grade">B+</span>
+      </div>
+    </div>
+
+    <!-- Status Card -->
+    <div class="card status-card">
+      <div class="status-content">
+        <img src="https://github.com/MrBiscuit921.png" alt="MrBiscuit921" class="status-avatar">
+        <h2>mrbiscuit921.github.io</h2>
+        <p>Probably baking something delicious...</p>
+      </div>
+    </div>
+
+    <!-- Tech Stack Card -->
+    <div class="card stack-card">
+      <h2>Stacks I use</h2>
+      <div class="stack-icons">
+        <div class="stack-icon">
+          <i class="fab fa-linux"></i>
+        </div>
+        <div class="stack-icon">
+          <i class="fab fa-windows"></i>
+        </div>
+        <div class="stack-icon">
+          <i class="fab fa-github"></i>
+        </div>
+        <div class="stack-icon">
+          <i class="fab fa-google"></i>
+        </div>
+      </div>
+      
+      <!-- Social Links -->
+      <div class="social-links">
+        <div class="social-row">
+          <a href="https://github.com/MrBiscuit921" class="social-icon">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="#" class="social-icon">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="#" class="social-icon">
+            <i class="fab fa-telegram"></i>
+          </a>
+        </div>
+        <div class="social-row">
+          <a href="#" class="social-icon">
+            <i class="fab fa-discord"></i>
+          </a>
+          <a href="#" class="social-icon">
+            <i class="fab fa-spotify"></i>
+          </a>
+          <a href="#" class="social-icon">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </div>
+      </div>
+      
+      <!-- Theme Toggle -->
+      <div class="theme-toggle">
+        <label class="switch">
+          <input type="checkbox" id="themeToggle">
+          <span class="slider round">
+            <i class="fas fa-moon"></i>
+          </span>
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
 </html>

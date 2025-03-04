@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Not Found | MrBiscuit921</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .error-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+      padding: 0 20px;
+    }
+    
+    .error-code {
+      font-size: 8rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: var(--accent-color);
+    }
+    
+    .error-message {
+      font-size: 1.5rem;
+      margin-bottom: 30px;
+    }
+    
+    .home-button {
+      background-color: var(--accent-color);
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 500;
+      cursor: pointer;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+    
+    .home-button:hover {
+      background-color: var(--secondary-color);
+      transform: translateY(-3px);
+    }
+    
+    .cookie-image {
+      width: 150px;
+      height: 150px;
+      margin-bottom: 20px;
+      animation: bounce 2s infinite;
+    }
+    
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="error-container">
+    <img src="https://github.com/MrBiscuit921.png" alt="MrBiscuit" class="cookie-image">
+    <div class="error-code">404</div>
+    <div class="error-message">Oops! This cookie crumbled away.</div>
+    <a href="index.html" class="home-button">Back to Home</a>
+  </div>
+
+  <script>
+    // Check for saved theme preference
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+      document.body.classList.add('dark');
+    }
+  </script>
+</body>
+</html>
+
